@@ -1,0 +1,12 @@
+[core]
+    pager = delta --plus-color="#012800" --minus-color="#340001" --theme='Monokai Extended'
+
+[credential]
+	helper = cache --timeout=3600
+
+[interactive]
+    diffFilter = delta --color-only
+
+[user]
+	email = odoricothibault@gmail.com
+	name = todorico
