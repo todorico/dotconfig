@@ -140,6 +140,8 @@ export FORGIT_FZF_DEFAULT_OPTS="
 --bind=alt-i:up,alt-k:down,alt-j:backward-char,alt-l:forward-char,ctrl-j:backward-word,ctrl-l:forward-word,alt-u:beginning-of-line,alt-o:end-of-line
 "
 
+
+export EDITOR=vi
 # Default DOTBARE_DIR is $HOME/.cfg
 # export DOTBARE_DIR="$XDG_CONFIG_HOME/dotbare"
 # Default DOTBARE_TREE is $HOME
