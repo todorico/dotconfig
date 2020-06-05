@@ -11,6 +11,6 @@ Those programs are required to deploy this configuration.
 - fzf     : command line fuzzy finder
 - dotbare : interactive dotfiles manager that rely on fzf
 
-#### Git
+### Git
 
 - detla : git diff syntax highlighter
