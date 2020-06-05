@@ -14,3 +14,13 @@ Those programs are required to deploy this configuration.
 ### Git
 
 - detla : git diff syntax highlighter
+
+## Installation
+
+### Manual
+
+```sh
+dotbare ...
+
+dotbare update-index --assume-unchanged README.md && rm README.md
+```
