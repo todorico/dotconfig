@@ -14,3 +14,14 @@ Those programs are required to deploy this configuration.
 ### Git
 
 - detla : git diff syntax highlighter
+
+## Installation
+
+### Manual
+
+```sh
+dotbare ...
+
+# Do not track README.md for changes and remove it localy
+dotbare update-index --assume-unchanged README.md && rm README.md
+```
