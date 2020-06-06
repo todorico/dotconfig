@@ -2,16 +2,25 @@
 
 # POSIX SHELL ENVIRONMENT CONFIGURATION
 
-source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/env.sh"
+[ -f   "${XDG_CONFIG_HOME:-$HOME/.config}/shell/env.sh" ] &&
+source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/env.sh" ||
+echo   "[WARNING] ZSH : \$XDG_CONFIG_HOME/shell/env.sh not found"
 
 # ZINIT PLUGINS
 
-source "${XDG_CONFIG_HOME:-$HOME/.config}/zinit/plugins.zsh"
+[ -f   "${XDG_CONFIG_HOME:-$HOME/.config}/zinit/plugins.zsh" ] &&
+source "${XDG_CONFIG_HOME:-$HOME/.config}/zinit/plugins.zsh" ||
+echo   "[WARNING] ZSH : \$XDG_CONFIG_HOME/zinit/plugins.zsh not found"
 
 # ZSH CUSTOM KEY BINDINGS
 
-source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/key-bindings.zsh"
+[ -f   "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/key-bindings.zsh" ] &&
+source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/key-bindings.zsh" ||
+echo   "[WARNING] ZSH : \$XDG_CONFIG_HOME/zsh/key-bindings.zsh not found"
 
 # POSIX SHELL ALIASES
 
-source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliases.sh"
+[ -f   "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliases.sh" ] &&
+source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliases.sh" ||
+echo   "[WARNING] ZSH : \$XDG_CONFIG_HOME/shell/aliases.sh not found"
+

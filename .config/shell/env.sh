@@ -130,7 +130,8 @@ export _Z_DATA=$XDG_DATA_HOME/z
 #####                  FZF                   #####
 
 export FZF_DEFAULT_OPTS="
---height 80%
+--height=80%
+--preview-window=right:60%
 --reverse
 --cycle
 --bind=alt-i:up,alt-k:down,alt-j:backward-char,alt-l:forward-char,ctrl-j:backward-word,ctrl-l:forward-word,alt-u:beginning-of-line,alt-o:end-of-line
@@ -140,9 +141,11 @@ export FORGIT_FZF_DEFAULT_OPTS="
 --bind=alt-i:up,alt-k:down,alt-j:backward-char,alt-l:forward-char,ctrl-j:backward-word,ctrl-l:forward-word,alt-u:beginning-of-line,alt-o:end-of-line
 "
 
-
 export EDITOR=vi
+
 # Default DOTBARE_DIR is $HOME/.cfg
 # export DOTBARE_DIR="$XDG_CONFIG_HOME/dotbare"
 # Default DOTBARE_TREE is $HOME
 # export DOTBARE_TREE="$HOME" # Default tracked directory is $HOME
+
+# 
