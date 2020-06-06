@@ -1,0 +1,69 @@
+// SublimeLinter Settings - User
+{
+	"linters":
+	{
+		"gcc": {
+			"disable": false,
+			"executable": ["gcc"],
+			"args": ["-Wall", "-Wextra", "-pedantic", "-fsyntax-only", "-std=c90"],
+			"I": [
+				"${file_path}/include",
+				"${folder}/include",
+				"${folder}/*",
+				"/usr/local/include",
+			],
+			"excludes": [],
+		},
+
+		"g++": {
+			"disable": false,
+			"executable": ["g++"],
+			"args": ["-Wall", "-Wextra", "-pedantic", "-fsyntax-only", "-std=c++17", "-Wshadow", "-Wnon-virtual-dtor"],
+			"I": [
+				"${file_path}/include",
+				"${folder}/include",
+				"${folder}/*",
+				"/usr/local/include",
+			],
+			"excludes": [],
+		},
+
+		"clang":
+		{
+			"disable": false,
+			"executable": ["clang"],
+			"args": ["-Wall", "-Wextra", "-pedantic", "-fsyntax-only", "-std=c90"],
+			"I": [
+				"${file_path}/include",
+				"${folder}/include",
+				"${folder}/*",
+				"/usr/local/include",
+			],
+			"excludes": [],
+		},
+
+		"clang++":
+		{
+			"disable": false,
+			"executable": ["clang++"],
+			"args": ["-Wall", "-Wextra", "-pedantic", "-fsyntax-only", "-std=c++17", "-Wshadow", "-Wnon-virtual-dtor"],
+			"I": [
+				"${file_path}/include",
+				"${folder}/include",
+				"${folder}/*",
+				"/usr/local/include",
+			],
+			"excludes": [],
+		},
+		
+		"cppcheck":
+		{
+			"args": ["--enable=all"]
+		},
+
+		"annotations": {
+			"warnings": ["WARNING", "TODO", "MEMO", "NOTE", "README"],
+			"errors": ["ERROR", "IMPORTANT", "FIX", "FIXME"],
+		}
+	}
+}

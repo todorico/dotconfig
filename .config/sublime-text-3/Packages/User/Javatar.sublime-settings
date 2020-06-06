@@ -1,0 +1,22 @@
+{
+	"jdk_version":
+	{
+		"use": ""
+	},
+	"message_id": 20,
+	"project_data":
+	{
+		"2":
+		{
+			"folders":
+			[
+				{
+					"path": "/home/thibault/Cours/Master/S1/HMIN105 - Programmation concurrente et repartie/TDs-TPs/TP4 - Communications client-serveur/UDP"
+				},
+				{
+					"path": "/home/thibault/Cours/Master/S1/HMIN105 - Programmation concurrente et repartie/TDs-TPs/TP4 - Communications client-serveur/TCP"
+				}
+			]
+		}
+	}
+}

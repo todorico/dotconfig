@@ -1,0 +1,50 @@
+[
+	{"id": "side-bar-files-open-with",
+		"children":
+		[
+			{ // Web browser
+				"caption": "Firefox",
+				"id": "side-bar-files-open-with-firefox",
+
+				"command": "side_bar_files_open_with",
+				"args": {
+									"paths": [],
+									"application": "/usr/bin/firefox",
+									"extensions":".*", //any file with extension
+									"args":[]
+						},
+				"open_automatically" : false // will close the view/tab and launch the application
+			},
+
+			{ // PDF viewer
+				"caption": "Okular",
+				"id": "side-bar-files-open-with-okular",
+
+				"command": "side_bar_files_open_with",
+				"args": {
+									"paths": [],
+									"application": "/usr/bin/okular",
+									"extensions":"pdf", //any file with extension
+									"args":[]
+						},
+				"open_automatically" : false // will close the view/tab and launch the application
+			},
+
+			{ // PDF viewer
+				"caption": "Yakuake-session",
+				"id": "side-bar-files-open-with-yakuake-session",
+
+				"command": "side_bar_files_open_with",
+				"args": {
+									"paths": [],
+									"application": "/usr/bin/yakuake-session",
+									"extensions":".*", //any file with extension
+									"args":[]
+						},
+				"open_automatically" : false // will close the view/tab and launch the application
+			},
+
+			{"caption":"-"}
+		]
+	}
+]

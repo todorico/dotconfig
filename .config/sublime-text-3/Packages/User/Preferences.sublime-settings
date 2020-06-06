@@ -1,0 +1,10 @@
+{
+	"font_size": 9,
+	"ignored_packages":
+	[
+		"SublimeLinter-clang",
+		"SublimeLinter-cpplint",
+		"SublimeLinter-gcc",
+		"Vintage"
+	]
+}

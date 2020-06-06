@@ -1,0 +1,10 @@
+{
+	"shell_cmd": "cmake ${file_path}/build && cd ${file_path}/build && cmake .. && make -j1",
+	"file_regex": "/([^/:]+):(\\d+):(\\d+): ",
+	// "variants": [
+	// 	{
+	// 		"name": "clean",
+	// 		"shell_cmd": "rm -rf ${file_path}/build && mkdir ${file_path}/build"
+	// 	}
+	// ]
+}
