@@ -20,7 +20,7 @@ Those programs are required to deploy this configuration.
 ### Manual
 
 ```sh
-dotbare ...
+dotbare finit -u [URL]
 
 # Do not track README.md for changes and remove it localy
 dotbare update-index --assume-unchanged README.md && rm README.md
