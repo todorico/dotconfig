@@ -20,7 +20,26 @@ alias azer='setxkbmap us'
 alias qwer='setxkbmap fr'
 alias wii="$HOME/Programmes/dolphin-emu/build/Binaries/./dolphin-emu"
 
+alias drawio="daemonize $HOME/Programmes/drawio/./draw*.AppImage"
+
+alias chafawide='chafa --size "$COLUMNS"'
+
 if [ "$(command -v bat)" ]; then
 	alias cat='bat'
 	export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 fi
+
+separate_with () {
+	SEP="$1"
+
+	[ "$#" -ge 2 ] && printf "$2"
+	[ "$#" -ge 3 ] && printf "$SEP%s" "${@:3}"
+
+	printf '\n'
+}
+
+weather () { curl wttr.in/"$(separate_with _ $@)" }
+alias wtr='weather'
+
+daemonize () { nohup "$@" </dev/null &>/dev/null & }
+alias dmn='daemonize'
