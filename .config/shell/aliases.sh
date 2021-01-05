@@ -18,28 +18,102 @@ alias ll='ls -alF'
 
 alias azer='setxkbmap us'
 alias qwer='setxkbmap fr'
-alias wii="$HOME/Programmes/dolphin-emu/build/Binaries/./dolphin-emu"
+alias wii='$HOME/Programmes/dolphin-emu/build/Binaries/./dolphin-emu'
 
-alias drawio="daemonize $HOME/Programmes/drawio/./draw*.AppImage"
+alias vscode='code'
+alias drawio='daemonize $HOME/Programmes/drawio/./draw*.AppImage'
+alias cqtdeployer='$HOME/.local/CQtDeployer/1.4/cqtdeployer.sh'
+alias cqt='$HOME/.local/CQtDeployer/1.4/cqt.sh'
 
 alias chafawide='chafa --size "$COLUMNS"'
+alias upenv='$SHELL;exit' # refresh environment without closing terminal
 
-if [ "$(command -v bat)" ]; then
-	alias cat='bat'
-	export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-fi
+#
+# Windows manager
+# 
 
-separate_with () {
-	SEP="$1"
-
-	[ "$#" -ge 2 ] && printf "$2"
-	[ "$#" -ge 3 ] && printf "$SEP%s" "${@:3}"
-
-	printf '\n'
+# Convert video to gif file.
+# Usage: video2gif video_file (scale) (fps)
+video2gif() {
+  ffmpeg -y -i "${1}" -vf fps=${3:-10},scale=${2:-320}:-1:flags=lanczos,palettegen "${1}.png"
+  ffmpeg -i "${1}" -i "${1}.png" -filter_complex "fps=${3:-10},scale=${2:-320}:-1:flags=lanczos[x];[x][1:v]paletteuse" "${1}".gif
+  rm "${1}.png"
 }
 
-weather () { curl wttr.in/"$(separate_with _ $@)" }
+
+# wm_window_list
+# wm_window_print_focused
+
+# wm_desktop_list_current() {
+#     wm_window_list
+# }
+
+# wm_window_list() {
+#     wmctrl -d
+# }
+# 
+WMUTILS="$HOME/Programmes/wmutils"
+
+xwin_focused() {
+    wmctrl -a :ACTIVE: -v 2>&1 | sed -n '2p' | cut -f 2 -d ':' | tr -d '[:space:]'
+}
+
+xwin_select() {
+	# use -f 3 at the end to find windows name instead of id
+	xwininfo 2>&1 | sed -n '6p' | cut -f 3 -d ':' | cut -f 2 -d ' '
+}
+
+xwin_focus() {
+	WID="${1}"
+	"$WMUTILS/core/./wtf" "$WID"
+}
+
+
+xwin_get_lineinfo () {
+	INFO=$(xwininfo -id "${1}" 2>&1 | sed -n "${2}p" | cut -f 2 -d ':' | tr -d '[:space:]')
+	echo "$INFO"
+}
+
+errcho() {
+	>&2 echo "$@"
+}
+
+xwin_get () {
+	WID="${1}"
+	(IFS=','; for attribute in $(echo "${2}")
+	do
+		case "$attribute" in 
+			x) xwin_get_lineinfo "$WID" 4 ;;
+			y) xwin_get_lineinfo "$WID" 5 ;;
+			w | width)  xwin_get_lineinfo "$WID" 8 ;;
+			h | height) xwin_get_lineinfo "$WID" 9 ;;
+			d | depth)  xwin_get_lineinfo "$WID" 10 ;;
+			b | border_size) xwin_get_lineinfo "$WID" 13 ;;
+			v | is_visible)  xwin_get_lineinfo "$WID" 20 ;;
+			*)  
+				errcho "$attribute is not a valid window attribute"
+				return 1
+			;;
+		esac
+	done)
+}
+
+if [ "$(command -v bat)" ]; then
+    alias cat='bat'
+    export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+fi
+
+separate_with() {
+    SEP="$1"
+
+    [ "$#" -ge 2 ] && printf "%s" "$2"
+    [ "$#" -ge 3 ] && printf "$SEP%s" "${@:3}"
+
+    printf '\n'
+}
+
+weather() { curl wttr.in/"$(separate_with _ "$@")"; }
 alias wtr='weather'
 
-daemonize () { nohup "$@" </dev/null &>/dev/null & }
+daemonize() { nohup "$@" </dev/null &>/dev/null &; }
 alias dmn='daemonize'

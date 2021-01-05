@@ -20,6 +20,9 @@ export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 # "well known" user directories like the desktop
 # folder and the music folder, etc.
 
+# xdg-user-dirs-update --set DOWNLOAD ~/Internet # set new value
+# xdg-user-dir DOWNLOAD # query valu
+
 # export XDG_DESKTOP_DIR="$HOME/Desktop"
 # export XDG_DOCUMENTS_DIR="$HOME/Documents"
 # export XDG_DOWNLOAD_DIR="$HOME/Downloads"
@@ -115,7 +118,8 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 # invalidate the cache and enable cache for
 # precompiled headers.
  
-export CCACHE_SLOPPINESS=file_macro,locale,time_macros,pch_defines
+# export CCACHE_SLOPPINESS=file_macro,locale,time_macros,pch_defines
+export CCACHE_SLOPPINESS=file_macro,locale,pch_defines,time_macros
 
 #####                  BAT                   #####
 

@@ -1,5 +1,5 @@
 {
-  "format_on_save": true,
-  
-  "style": "Custom",
+	"binary": "/usr/bin/clang-format",
+	"format_on_save": true,
+	"style": "Custom"
 }

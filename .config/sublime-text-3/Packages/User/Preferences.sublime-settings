@@ -1,8 +1,10 @@
 {
+	"dictionary": "Packages/Language - French - Français/fr_FR.dic",
 	"font_size": 9,
 	"ignored_packages":
 	[
 		"SublimeLinter-clang",
+		"SublimeLinter-cppcheck",
 		"SublimeLinter-cpplint",
 		"SublimeLinter-gcc",
 		"Vintage"
