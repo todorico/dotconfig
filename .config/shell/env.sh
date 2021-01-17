@@ -42,7 +42,7 @@ export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 #####                 CCACHE                 #####
 
 export CCACHE_DIR="$XDG_CACHE_HOME/ccache"
-export CCACHE_CONFIGPATH="$XDG_CONFIG_HOME/ccache/config"
+export CCACHE_CONFIGPATH="$XDG_CONFIG_HOME/ccache/ccache.conf"
 
 #####            NVIDIA-SETTINGS             #####
 
