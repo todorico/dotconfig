@@ -73,7 +73,7 @@ if [ "$(command -v npm)" ]; then
 	# file location.
 
 	export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
-f
+
 	# Create new XDG compliant configuration home.
 
 	[ ! -d "$(dirname $NPM_CONFIG_USERCONFIG)" ] && mkdir -p "$(dirname $NPM_CONFIG_USERCONFIG)"
