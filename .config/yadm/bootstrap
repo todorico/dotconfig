@@ -12,6 +12,7 @@ bootstrap_xsh () {
 
   # Bootstrap xsh for all supported shells.
   xsh bootstrap -s posix:bash:zsh >/dev/null
+  xsh init
 }
 
 bootstrap_xsh

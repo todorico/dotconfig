@@ -1,0 +1,21 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	sharedrepository = 0600
+	worktree = /home/tib
+[receive]
+	denyNonFastforwards = true
+[status]
+	showUntrackedFiles = no
+[yadm]
+	managed = true
+[remote "origin"]
+	url = https://github.com/todorico/dotconfig.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[branch "dell-xps"]
+	remote = origin
+	merge = refs/heads/dell-xps
