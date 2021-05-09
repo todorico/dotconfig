@@ -1,10 +1,10 @@
 #!/bin/sh
 
-echo YADM is bootstrapping...
+echo "Configuration bootstrap..."
 
 # Create symlinks to shell runcoms in $HOME.
-bootstrap_xsh {
-  print -P "%F{blue}::%f Linking shell runcoms to xsh runcoms..."
+bootstrap_xsh () {
+  echo "Linking shell runcoms to xsh runcoms..."
 
   # Source xsh with the appropriate configuration directory.
   XSH_CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/shell"
