@@ -1,1 +1,0 @@
-/home/thibault/.config/xsh/runcom/zsh/zshenv

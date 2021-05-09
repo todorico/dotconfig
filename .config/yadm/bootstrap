@@ -8,7 +8,7 @@ bootstrap_xsh () {
 
   # Source xsh with the appropriate configuration directory.
   XSH_CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/shell"
-  source "${XSH_DIR:-${XDG_CONFIG_HOME:-$HOME/.config}/xsh}/xsh.sh"
+  . "${XSH_DIR:-${XDG_CONFIG_HOME:-$HOME/.config}/xsh}/xsh.sh"
 
   # Bootstrap xsh for all supported shells.
   xsh bootstrap -s posix:bash:zsh >/dev/null
