@@ -98,11 +98,6 @@ xwin_get () {
 	done)
 }
 
-if [ "$(command -v bat)" ]; then
-    alias cat='bat'
-    export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-fi
-
 separate_with() {
     SEP="$1"
 

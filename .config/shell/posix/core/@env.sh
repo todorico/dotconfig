@@ -103,8 +103,9 @@ fi
 ##################################################
 
 #####                 PATHS                  #####
-
-export MANPATH="${MANPATH:-$HOME/.local/share/man:$(manpath)}"
+export USER_MANPATH="$XDG_DATA_HOME/man"
+export MANPATH="${MANPATH:-$USER_MANPATH:$(manpath)}"
+export PATH="$HOME/.local/bin:${PATH}"
 
 #####                  GCC                   #####
 
@@ -121,35 +122,8 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 # export CCACHE_SLOPPINESS=file_macro,locale,time_macros,pch_defines
 export CCACHE_SLOPPINESS=file_macro,locale,pch_defines,time_macros
 
-#####                  BAT                   #####
-
-# Enable line numbers and git changes display.
-
-export BAT_STYLE="numbers,changes"
-
 #####                   Z                    #####
 
-export _Z_DATA=$XDG_DATA_HOME/z
-
-#####                  FZF                   #####
-
-export FZF_DEFAULT_OPTS="
---height=80%
---preview-window=right:60%
---reverse
---cycle
---bind=alt-i:up,alt-k:down,alt-j:backward-char,alt-l:forward-char,ctrl-j:backward-word,ctrl-l:forward-word,alt-u:beginning-of-line,alt-o:end-of-line
-"
-
-export FORGIT_FZF_DEFAULT_OPTS="
---bind=alt-i:up,alt-k:down,alt-j:backward-char,alt-l:forward-char,ctrl-j:backward-word,ctrl-l:forward-word,alt-u:beginning-of-line,alt-o:end-of-line
-"
 
 export EDITOR=vi
 
-# Default DOTBARE_DIR is $HOME/.cfg
-# export DOTBARE_DIR="$XDG_CONFIG_HOME/dotbare"
-# Default DOTBARE_TREE is $HOME
-# export DOTBARE_TREE="$HOME" # Default tracked directory is $HOME
-
-# 
