@@ -3,7 +3,7 @@
 echo YADM is bootstrapping...
 
 # Create symlinks to shell runcoms in $HOME.
-function bootstrap_xsh {
+bootstrap_xsh {
   print -P "%F{blue}::%f Linking shell runcoms to xsh runcoms..."
 
   # Source xsh with the appropriate configuration directory.
