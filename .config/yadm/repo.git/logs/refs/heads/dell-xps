@@ -1,5 +1,0 @@
-0000000000000000000000000000000000000000 fd288203a4ce6042313630c9f376a269a8056d1f todorico <odoricothibault@gmail.com> 1620583767 +0200	branch: Created from refs/remotes/origin/dell-xps
-fd288203a4ce6042313630c9f376a269a8056d1f 058716f60a8111877423ef8115c52bb1ef584eef todorico <odoricothibault@gmail.com> 1620584049 +0200	commit: Update bootstrap
-058716f60a8111877423ef8115c52bb1ef584eef 0ec1633364f88524f757065c1c33f9422cc29dbd todorico <odoricothibault@gmail.com> 1620584426 +0200	commit: Fix bootstrap script
-0ec1633364f88524f757065c1c33f9422cc29dbd 07d1eca8a9ffd9f8ad80154437a6f190850a8076 todorico <odoricothibault@gmail.com> 1620585010 +0200	rebase finished: returning to refs/heads/dell-xps
-07d1eca8a9ffd9f8ad80154437a6f190850a8076 e523ed176d92b417a78c727f1aa325fce0a621ab todorico <odoricothibault@gmail.com> 1620585243 +0200	commit: Fix bootstrap + remove useless .zshenv
