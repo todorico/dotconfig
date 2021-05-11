@@ -12,14 +12,14 @@ xsh module core -s posix
 MODULES=(
 # [shared]
     core
-    #zinit
-# [zsh-lib]
-    ohmyzsh-lib
+    #zinit    
 # [zsh-plugins]
     zsh-autosuggestions
     zsh-completions
     auto-ls
     per-directory-history
+# [ohmyzsh]
+    ohmyzsh-lib
     ohmyzsh-plugins
 # [cli-tools]
     z
