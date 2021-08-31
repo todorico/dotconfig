@@ -46,7 +46,7 @@ export CCACHE_CONFIGPATH="$XDG_CONFIG_HOME/ccache/ccache.conf"
 
 #####            NVIDIA-SETTINGS             #####
 
-if [ "$(command -v nvidia-settings)" ]; then
+if command -v nvidia-settings >/dev/null 2>&1; then
 
 	NVIDIA_SETTINGS_XDG_CONFIG_HOME="$XDG_CONFIG_HOME/nvidia"
 
@@ -67,7 +67,7 @@ fi
 
 #####                  NPM                   #####
 
-if [ "$(command -v npm)" ]; then
+if command -v npm >/dev/null 2>&1; then
 
 	# Set new default XDG compliant configuration
 	# file location.
@@ -81,7 +81,7 @@ if [ "$(command -v npm)" ]; then
 	# Write new configuration file that will force
 	# npm to use XDG Base directories.
 
-	[ ! -f "$NPM_CONFIG_USERCONFIG" ] && "$NPM_CONFIG_USERCONFIG" <<-EOF
+	[ ! -f "$NPM_CONFIG_USERCONFIG" ] && cat <<-EOF > "$NPM_CONFIG_USERCONFIG"
 		prefix=${XDG_DATA_HOME}/npm
 		cache=${XDG_CACHE_HOME}/npm
 		tmp=${XDG_RUNTIME_DIR}/npm

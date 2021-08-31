@@ -26,7 +26,6 @@ MODULES=(
     fzf
     forgit
     bat
-    bat-extras
     delta
     fd
     ripgrep
@@ -36,8 +35,8 @@ MODULES=(
     micro
     # spack
     # restic
-    tealdeer
-    cht.sh
+    cht
+    brew
     # vivid
 # [cli-plugins]
     fz
