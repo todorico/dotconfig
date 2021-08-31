@@ -11,10 +11,11 @@ Automatically updated and deployable configuration for my linux systems.
 
 ```sh
 sudo apt install yadm zsh
+sudo chsh -s "$(which zsh)"
 
-yadm clone https://github.com/todorico/dotconfig.git
+yadm clone git@github.com:todorico/dotconfig.git
 yadm checkout dell-xps
 yadm bootstrap
 
-sudo chsh -s "$(which zsh)"
+zsh
 ```
