@@ -3,7 +3,7 @@
 #
 
 # Reload the shell configuration without instant prompt to show output in real time.
-alias reload='XSH_BENCHMARK=1 POWERLEVEL9K_INSTANT_PROMPT=off exec zsh'
+alias reload='POWERLEVEL9K_INSTANT_PROMPT=off exec zsh'
 
 # Enable Powerlevel10k instant prompt. Should stay
 # close to the top of ~/.zshrc.
@@ -70,23 +70,3 @@ ump_clear(){
         } 
     done
 }
-
-# Autoload all appropriate functions from a directory.
-# This was totally stolen from prezto.
-# Usage: autoload_dir <dir>
-function autoload_dir {
-  local dir="$1"
-  local skip_glob='^([_.]*|prompt_*_setup|*~)(-.N:t)'
-  local func
-
-  # Extended globbing is needed for listing autoloadable function directories.
-  setopt local_options extended_glob
-
-  fpath=($dir(-/FN) $fpath)
-  for func in $dir/$~skip_glob; do
-    autoload -Uz "$func"
-  done
-}
-
-# Autoload all module functions.
-autoload_dir ${0:h}/function

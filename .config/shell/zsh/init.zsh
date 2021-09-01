@@ -12,7 +12,7 @@ xsh module core -s posix
 MODULES=(
 # [shared]
     core
-    #zinit    
+    zinit
 # [zsh-plugins]
     zsh-autosuggestions
     zsh-completions
@@ -24,9 +24,9 @@ MODULES=(
 # [cli-tools]
     z
     fzf
-    forgit
+    # forgit
     bat
-    delta
+    # delta
     fd
     ripgrep
     # hexyl
