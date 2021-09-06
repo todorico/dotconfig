@@ -1,3 +1,44 @@
-.vscode
-.config/sublime-text-3/Packages/User/Package Control.cache
-.config/sublime-text-3/Packages/User/Package Control.last-run
+# Build directories
+[Bb]in/
+[Bb]uild*/
+[Dd]ebug*/
+[Oo]bj/
+[Oo]ut/
+[Rr]elease*/
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+
+# CMake files
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+
+# IDE project files
+CMakeSettings.json
+*.sublime-project
+*.sublime-workspace
+*.vscode
+*.vs
+
+# CLang Compilation database
+compile_commands.json
