@@ -38,3 +38,6 @@ CMakeSettings.json
 *.sublime-workspace
 *.vscode
 *.vs
+
+# Python
+__pycache__
