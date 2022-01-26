@@ -1,4 +1,4 @@
-# Install cli-tool from: https://github.com/zdharma/zinit
+# Install cli-tool from: https://github.com/zdharma-continuum/zinit
 
 # Put zinit data in an XDG compliant location by default.
 
@@ -10,9 +10,9 @@ ZINIT[BIN_DIR]="${ZINIT[BIN_DIR]:-$ZINIT[HOME_DIR]/bin}"
 # Download zinit from github.
 
 if [ ! -f "$ZINIT[BIN_DIR]/zinit.zsh" ]; then
-    print -P "%F{33}▓▒░ %F{220}Installing DHARMA Initiative Plugin Manager (zdharma/zinit)…%f"
+    print -P "%F{33}▓▒░ %F{220}Installing DHARMA Initiative Plugin Manager (zdharma-continuum/zinit)…%f"
     command mkdir -p "$ZINIT[HOME_DIR]" && command chmod g-rwX "$ZINIT[HOME_DIR]"
-    command git clone https://github.com/zdharma/zinit "$ZINIT[BIN_DIR]" &&
+    command git clone https://github.com/zdharma-continuum "$ZINIT[BIN_DIR]" &&
     print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" ||
     print -P "%F{160}▓▒░ The clone has failed.%f%b"
 fi
